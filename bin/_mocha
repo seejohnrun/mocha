@@ -42,7 +42,7 @@ program
   .usage('[debug] [options] [files]')
   .option('-r, --require <name>', 'require the given module')
   .option('-R, --reporter <name>', 'specify the reporter to use', 'dot')
-  .option('-u, --ui <name>', 'specify user-interface (bdd|tdd|exports)', 'bdd')
+  .option('-u, --ui <name>', 'specify user-interface (bdd|tdd|exports|cbdd)', 'bdd')
   .option('-g, --grep <pattern>', 'only run tests matching <pattern>')
   .option('-t, --timeout <ms>', 'set test-case timeout in milliseconds [2000]')
   .option('-s, --slow <ms>', '"slow" test threshold in milliseconds [75]', parseInt)
@@ -89,6 +89,7 @@ program.on('interfaces', function(){
   console.log('    tdd');
   console.log('    qunit');
   console.log('    exports');
+  console.log('    cbdd');
   console.log('');
   process.exit();
 });

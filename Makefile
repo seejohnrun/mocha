@@ -32,7 +32,7 @@ lib-cov:
 
 test: test-unit
 
-test-all: test-bdd test-tdd test-qunit test-exports test-unit test-grep
+test-all: test-bdd test-tdd test-qunit test-exports test-cbdd test-unit test-grep
 
 test-unit:
 	@./bin/mocha \
@@ -57,6 +57,12 @@ test-qunit:
 		--reporter $(REPORTER) \
 		--ui qunit \
 		test/acceptance/interfaces/qunit
+
+test-cbdd:
+	@./bin/mocha \
+		--reporter $(REPORTER) \
+		--ui cbdd \
+		test/acceptance/interfaces/cbdd
 
 test-exports:
 	@./bin/mocha \
